@@ -1,0 +1,35 @@
+<launch>
+  <!-- Load the URDF into ROS parameter server -->
+	
+  <param name="robot_description" command="$(find xacro)/xacro '$(find summit_description)/robot/summit.urdf.xacro' --inorder" />
+
+  <!-- Publish joint values -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <!-- convert joint states to TF transforms for rviz, etc  -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" args="-urdf -model summit_xl -x 0 -y 0 -z 0 -param robot_description"/>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find summit_bringup)/rviz/rviz_config.rviz"/>
+
+  <node name="map_server" pkg="map_server" type="map_server" 
+	args="$(find summit_description)/worlds/new_map.yaml" output="screen"/> 
+
+	<!-- <node name="static_transforms" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 map odom 100"/> -->
+
+  <!-- <node type="laser_2_point" pkg="summit_description" name="laser_2_point"/> -->
+
+    <include file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch"/>
+
+
+  <node name="message_transform" pkg="summit_description" type="MessageTransformer"/>
+
+<node name="static_transforms" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 imu_link imu 100"/>
+
+  <node name="imu_filt" pkg="imu_complementary_filter" type="complementary_filter_node"/>
+
+  <node name="laser_scan_matcher" pkg="laser_scan_matcher" type="laser_scan_matcher_node"/>
+  <!-- <include file="$(find robot_pose_ekf)/launch/robot_pose_ekf.launch"/> -->
+
+</launch>

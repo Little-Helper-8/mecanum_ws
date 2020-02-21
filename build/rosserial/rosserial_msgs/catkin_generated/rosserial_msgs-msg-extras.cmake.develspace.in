@@ -1,0 +1,2 @@
+set(rosserial_msgs_MESSAGE_FILES "/home/rahul/mecanum_ws/src/rosserial/rosserial_msgs/msg/Log.msg;/home/rahul/mecanum_ws/src/rosserial/rosserial_msgs/msg/TopicInfo.msg")
+set(rosserial_msgs_SERVICE_FILES "/home/rahul/mecanum_ws/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv;/home/rahul/mecanum_ws/src/rosserial/rosserial_msgs/srv/RequestParam.srv;/home/rahul/mecanum_ws/src/rosserial/rosserial_msgs/srv/RequestServiceInfo.srv")

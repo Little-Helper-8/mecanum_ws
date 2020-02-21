@@ -1,0 +1,8 @@
+prefix=/home/rahul/mecanum_ws/install
+
+Name: summit_bringup
+Description: Description of summit_bringup
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/rahul/mecanum_ws/install/lib 
+Requires: 
