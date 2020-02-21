@@ -1,0 +1,24 @@
+[submodule "src/roboclaw_ros"]
+	url = https://github.com/Rahul-Ravichandran/roboclaw_ros.git
+[submodule "src/imu_tools"]
+	url = https://github.com/Rahul-Ravichandran/imu_tools.git
+[submodule "src/ira_laser_tools"]
+	url = https://github.com/Rahul-Ravichandran/ira_laser_tools.git
+[submodule "src/laser_filters"]
+	url = https://github.com/Rahul-Ravichandran/laser_filters.git
+[submodule "src/mpu6050_serial_to_imu"]
+	url = https://github.com/Rahul-Ravichandran/mpu6050_serial_to_imu.git
+[submodule "src/robot_pose_ekf"]
+	url = https://github.com/Rahul-Ravichandran/robot_pose_ekf.git
+[submodule "src/rosserial"]
+	url = https://github.com/Rahul-Ravichandran/rosserial.git
+[submodule "src/rplidar_ros"]
+	url = https://github.com/Rahul-Ravichandran/rplidar_ros.git
+[submodule "src/scan_tools"]
+	url = https://github.com/Rahul-Ravichandran/scan_tools.git
+[submodule "src/slam_gmapping"]
+	url = https://github.com/Rahul-Ravichandran/slam_gmapping.git
+[submodule "src/teb_local_planner_tutorials"]
+	url = https://github.com/Rahul-Ravichandran/teb_local_planner_tutorials.git
+[submodule "src/teleop_twist_keyboard"]
+	url = https://github.com/Rahul-Ravichandran/teleop_twist_keyboard.git
