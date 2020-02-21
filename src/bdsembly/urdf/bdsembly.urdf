@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="bdsembly">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0014657 0.013166 -0.053334"
+        rpy="0 0 0" />
+      <mass
+        value="10.671" />
+      <inertia
+        ixx="0.099298"
+        ixy="-9.8583E-09"
+        ixz="-5.0395E-05"
+        iyy="0.13796"
+        iyz="-4.0684E-09"
+        izz="0.080836" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bdsembly/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bdsembly/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel1">
+    <inertial>
+      <origin
+        xyz="0.0325086114650895 -0.0459306237675355 0.0324729306649507"
+        rpy="0 0 0" />
+      <mass
+        value="0.538350148156069" />
+      <inertia
+        ixx="0.000305748570371087"
+        ixy="-5.33482477049572E-05"
+        ixz="3.75472073007E-05"
+        iyy="0.000343281414956485"
+        iyz="-5.33286574004068E-05"
+        izz="0.000305738864169209" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bdsembly/meshes/wheel1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bdsembly/meshes/wheel1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="revolute1"
+    type="revolute">
+    <origin
+      xyz="-0.1762 -0.2485 -0.071"
+      rpy="0.88891 -0.43749 -2.1555" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel1" />
+    <axis
+      xyz="0.5 -0.70711 0.5" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel2">
+    <inertial>
+      <origin
+        xyz="-0.0323764880177889 0.0458261140105679 -0.0324106791120429"
+        rpy="0 0 0" />
+      <mass
+        value="0.538350147600245" />
+      <inertia
+        ixx="0.000305751410916887"
+        ixy="-5.33370249038691E-05"
+        ixz="3.75415247374355E-05"
+        iyy="0.000343267291537093"
+        iyz="-5.33488911140887E-05"
+        izz="0.000305750145123579" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bdsembly/meshes/wheel2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bdsembly/meshes/wheel2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="revolute2"
+    type="revolute">
+    <origin
+      xyz="0.1762 -0.2485 -0.071"
+      rpy="-2.2013 0.5049 2.1789" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel2" />
+    <axis
+      xyz="0.5 -0.70711 0.5" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel3">
+    <inertial>
+      <origin
+        xyz="0.0325078655051714 -0.0459316778516978 0.0324721859737383"
+        rpy="0 0 0" />
+      <mass
+        value="0.538350147639216" />
+      <inertia
+        ixx="0.000305752103268634"
+        ixy="-5.33418782399497E-05"
+        ixz="3.75417170291165E-05"
+        iyy="0.00034329236044473"
+        iyz="-5.33350386525234E-05"
+        izz="0.000305724383988207" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bdsembly/meshes/wheel3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bdsembly/meshes/wheel3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="revolute3"
+    type="revolute">
+    <origin
+      xyz="0.1762 0.2485 -0.071"
+      rpy="2.7707 -0.9653 -0.49815" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel3" />
+    <axis
+      xyz="0.5 -0.70711 0.5" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel4">
+    <inertial>
+      <origin
+        xyz="-2.16114265538248E-05 -0.0649686249809741 -1.1427105457068E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.538349716887835" />
+      <inertia
+        ixx="0.000268195382258204"
+        ixy="-1.32268160577611E-08"
+        ixz="-6.36335165190725E-09"
+        iyy="0.000418715879382062"
+        iyz="-6.29627817316218E-09"
+        izz="0.000267853062165749" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bdsembly/meshes/wheel4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bdsembly/meshes/wheel4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="revolute4"
+    type="revolute">
+    <origin
+      xyz="-0.1762 0.2485 -0.071"
+      rpy="0 -0.76525 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

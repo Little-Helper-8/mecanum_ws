@@ -1,0 +1,8 @@
+prefix=/home/rahul/mecanum_ws/install
+
+Name: bdsembly
+Description: Description of bdsembly
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/rahul/mecanum_ws/install/lib 
+Requires: 

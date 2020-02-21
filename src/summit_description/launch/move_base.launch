@@ -1,0 +1,43 @@
+<launch>
+
+<!--  ************** Global Parameters ***************  -->
+        <!-- <param name="/use_sim_time" value="false"/> -->
+
+<node pkg="amcl" type="amcl" name="amcl" output="screen">
+	<remap from="/scan" to="/scan_multi" />
+	<rosparam file="$(find summit_description)/launch/amcl_params.yaml" command="load" />
+
+
+        <param name="odom_model_type"		value="omni"/>
+
+        <param name="odom_alpha1" 		value="0.005"/>
+		<param name="odom_alpha2" 		value="0.005"/>
+		<param name="odom_alpha3" 		value="0.010"/>
+		<param name="odom_alpha4" 		value="0.005"/>
+		<param name="odom_alpha5" 		value="0.003"/> 
+</node>
+
+
+<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+
+	<rosparam file="$(find summit_description)/launch/costmap_common_params.yaml" command="load" ns="global_costmap" />
+
+	<rosparam file="$(find summit_description)/launch/costmap_common_params.yaml" command="load" ns="local_costmap" />
+
+	<rosparam file="$(find summit_description)/launch/local_costmap_params.yaml" ns="local_costmap" command="load" />
+
+	<rosparam file="$(find summit_description)/launch/global_costmap_params.yaml" ns="global_costmap" command="load" />
+
+	<rosparam file="$(find summit_description)/launch/base_local_planner_params.yaml" command="load" />
+
+	<param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+	<param name="controller_frequency" value="5.0" /> 
+
+</node>
+
+
+
+
+
+
+</launch>
